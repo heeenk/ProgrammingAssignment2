@@ -39,7 +39,6 @@ makeCacheMatrix <- function(x = matrix()) {
 # from the cache.
 # 
 cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
     i <- x$getInverse()
 
     # if the inverse is available and the matrix 'x' hasn't changed
@@ -56,7 +55,7 @@ cacheSolve <- function(x, ...) {
     x$setInverse(i)
    
     # return it 
-    i
+    return(i)
 }
 
 ## matrixEqual:
